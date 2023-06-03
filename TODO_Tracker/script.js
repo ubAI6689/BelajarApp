@@ -20,12 +20,24 @@ addButton.addEventListener('click', function() {
     listItem.appendChild(checkbox);
     listItem.appendChild(label);
 
+    // Create a priority dropdown
+    var priorityDropdown = document.createElement('select');
+    priorityDropdown.innerHTML = `
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    `;
+
+    // Append the priority dropdown to the list item
+    listItem.appendChild(priorityDropdown);
+
     // Append the list item to the todo list
     todoList.appendChild(listItem);
 
     // Clear the input field
     input.value = '';
 });
+
 
 // Add event listener to the todo list for checkbox changes
 todoList.addEventListener('change', function(event) {
