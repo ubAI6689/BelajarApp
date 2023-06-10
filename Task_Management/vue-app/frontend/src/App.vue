@@ -1,5 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
+  <registration-form></registration-form>
+  <login-form></login-form>
   <TaskInput @task-added="addTask"></TaskInput>
   <task-list :tasks="tasks" @task-deleted="deleteTask"></task-list>
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
@@ -9,13 +11,17 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import TaskInput from './components/TaskInput.vue'
 import TaskList from './components/TaskList.vue'
+import RegistrationForm from './components/RegistrationForm.vue'
+import LoginForm from './components/LoginForm.vue'
 
 export default {
   name: 'App',
   components: {
     // HelloWorld,
+    RegistrationForm,
+    LoginForm,
     TaskInput,
-    TaskList
+    TaskList,
   },
   data() {
     return {
